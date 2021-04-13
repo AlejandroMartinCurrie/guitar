@@ -218,14 +218,14 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 1897946294}
           m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-          m_MethodName: HomeLevel
-          m_Mode: 1
+          m_MethodName: LoadScene
+          m_Mode: 5
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: 
+            m_StringArgument: SelectionScene
             m_BoolArgument: 0
           m_CallState: 2
 --- !u!114 &159131974
@@ -1897,7 +1897,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 34.900055, y: -140.6}
+  m_AnchoredPosition: {x: 34.900055, y: -149}
   m_SizeDelta: {x: 54.9413, y: 46.1201}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1420300159
@@ -1919,7 +1919,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 519420033}
           m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-          m_MethodName: set10seconds
+          m_MethodName: Set10seconds
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2161,7 +2161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 160.6, y: -140.6}
+  m_AnchoredPosition: {x: 160.6, y: -149}
   m_SizeDelta: {x: 54.9413, y: 46.1201}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1568863679
@@ -2183,7 +2183,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 519420033}
           m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-          m_MethodName: set30seconds
+          m_MethodName: Set30seconds
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2316,7 +2316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 99, y: -140.6}
+  m_AnchoredPosition: {x: 99, y: -149}
   m_SizeDelta: {x: 54.9413, y: 46.1201}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1653119089
@@ -2338,7 +2338,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 519420033}
           m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-          m_MethodName: set20seconds
+          m_MethodName: Set20seconds
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

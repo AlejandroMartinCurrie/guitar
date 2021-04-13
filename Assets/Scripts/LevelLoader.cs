@@ -12,14 +12,11 @@ public class LevelLoader : MonoBehaviour
     }
 
 
-    public void LoadLevel()
+    public void LoadScene(string sceneToLoad)
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene(sceneToLoad);
     }
-    public void HomeLevel()
-    {
-        SceneManager.LoadScene("SelectionScene");
-    }
+    
 
 
     public void ExitGame()

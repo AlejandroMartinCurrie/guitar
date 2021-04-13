@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+
 public class GameController : MonoBehaviour
 {
     
@@ -28,20 +29,10 @@ public class GameController : MonoBehaviour
 
     public List<Chords> chordCollection;
 
-    public int numbergot0;
-    public int numbergot1;
-    public int numbergot2;
-    public int numbergot3;
-
-
     public int setTimer1;
     public int setTimer2;
     public int setTimer3;
-
-
-
     public int[] numberarray;
-
     int currentChordIndex;
     int clickNUmber;
 
@@ -57,17 +48,13 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        numberarray = new int[4];
+        
         timeBar.maxValue = 20f;
         setTimer1 = 10;
         setTimer2 = 20;
         setTimer3 = 30;
+
         
-        
-        numberarray[0] = numbergot0 = PlayerPrefs.GetInt("Chord"+1);
-        numberarray[1] = numbergot1 = PlayerPrefs.GetInt("Chord"+2);
-        numberarray[2] = numbergot2 = PlayerPrefs.GetInt("Chord"+3);
-        numberarray[3] = numbergot3 = PlayerPrefs.GetInt("Chord"+4);
 
         randomizedOn = false;
         fingerInstances = new List<GameObject>();
@@ -76,53 +63,40 @@ public class GameController : MonoBehaviour
         newSpace = GetComponent<PixelEditor>().space;
         currentChordIndex = 0;
         currentChord = chordCollection[numberarray[currentChordIndex]];
-        //ListControllers chordList = FindObjectOfType<ListControllers>();
-        //print(chordList.chordOrder.Length);
-        
-        Refresh();
-        
+        Refresh();        
     }
-    
 
-
-
-    public void set10seconds()
+    public void Set10seconds()
     {
         timeBar.maxValue = setTimer1;
         timer = setTimer1;
+        timePassed = 0;
+        
     }
-    public void set20seconds()
+    public void Set20seconds()
     {
         timeBar.maxValue = setTimer2;
         timer = setTimer2;
+        timePassed = 0;
     }
-    public void set30seconds()
+    public void Set30seconds()
     {
         timeBar.maxValue = setTimer3;
         timer = setTimer3;
+        timePassed = 0;
     }
-
-
-
     public void ActivateRandomizer()
     {
-        
         randomizedOn = true;    
         clickNUmber++;
-        //print(clickNUmber);
     }
     public void DeActivateRandom()
     {
         randomizedOn = false;
         clickNUmber = 0;
     }
-
-
-
-
     public void Randomize()
-    {
-        
+    {        
         if( clickNUmber <=1)
         {
             buttonAR.GetComponentInChildren<Text>().text ="Auto";
@@ -137,7 +111,6 @@ public class GameController : MonoBehaviour
                 timePassed = 0;
                 Refresh();
             }
-
         }
         else
         {
@@ -146,12 +119,9 @@ public class GameController : MonoBehaviour
             randomizedOn = false;
             nextButton.gameObject.SetActive(true);
             previousButton.gameObject.SetActive(true);
-            GetCurrentChord();
-            
+            GetCurrentChord();            
         }
-
     }
-
 
     public void TimerCount()
     {
@@ -159,8 +129,6 @@ public class GameController : MonoBehaviour
         timePassed.ToString("0");
 
     }
-
-
     public void GetCurrentChord()
     {
             currentChordIndex++;
@@ -174,16 +142,14 @@ public class GameController : MonoBehaviour
     public void GetLastChord()
     {
         currentChordIndex--;
-        if (currentChordIndex <= 0)
+        if (currentChordIndex <=0)
         {
-            currentChordIndex = 0;
+            currentChordIndex = 3;
         }
         currentChord = chordCollection[numberarray[currentChordIndex]];
         Refresh();
 
     }
-
-
 
     //Functions
     public void Refresh()

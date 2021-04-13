@@ -7,8 +7,9 @@ using UnityEngine;
 public class Chords : ScriptableObject
 {   
     public string chordName;
-    public int barreChords; 
-    
+    public int barreChords;
+    public int ChordID;
+          
     public List<int> indexFinger;
     public List<int> middleFinger;
     public List<int> ringFinger;
